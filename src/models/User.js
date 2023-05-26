@@ -17,10 +17,6 @@ const UserSchema = new mongoose.Schema({
         select: false,
         required: true
     },
-    image:{
-        type: String,
-        required: false
-    }
 }, {timestamps: true});
 
 UserSchema.pre('save', async function (next){
