@@ -2,8 +2,8 @@ const cors = require('cors');
 const express = require('express');
 const app = express();
 
-// const connectDB = require('./src/database/db');
-// connectDB();
+const connectDB = require('./src/database/db');
+connectDB();
 
 app.use(express.json());
 
