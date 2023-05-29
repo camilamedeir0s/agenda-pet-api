@@ -17,8 +17,8 @@ const PetSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    age: {
-        type: Number,
+    birth_date: {
+        type: String,
         required: false
     },
     weight: {
