@@ -3,14 +3,15 @@ const User = require("../models/User");
 module.exports = {
   create: async (req, res) => {
     const {
-      name,
-      email
+      email,
+      password
     } = req.body;
 
     try {
       const user = await User.create({
-        name: name,
+        name: email,
         email: email,
+        password: password
       });
       return res.status(201).json({ user: {_id: user.id, name: user.name, email: user.email }});
     } catch (err) {

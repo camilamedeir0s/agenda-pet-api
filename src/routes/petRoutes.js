@@ -6,6 +6,7 @@ const router = express.Router();
 router.use(authMiddleware);
 router.post('/create', petController.create);
 router.get('/get/:id', petController.getOne);
+router.get('/get', petController.getAll);
 router.put('/update/:id', petController.update);
 router.delete('/delete/:id', petController.delete);
 

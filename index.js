@@ -11,9 +11,9 @@ app.get('/', (req, res) => {
     res.json({ message: 'OK' })
 })
 
-// app.use(cors());
-// app.options('*', cors());
-// app.all('*', require("./src/routes/index.js"));
+app.use(cors());
+app.options('*', cors());
+app.all('*', require("./src/routes/index.js"));
 
 const PORT = 8080;
 app.listen(PORT, () => {

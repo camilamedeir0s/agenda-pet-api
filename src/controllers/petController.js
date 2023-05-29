@@ -49,6 +49,18 @@ module.exports = {
     }
   },
 
+  getAll: async (req, res) => {
+    const owner_id = req.id;
+    try {
+      console.log(owner_id)
+      const pet = await Pet.find({ owner: owner_id});
+      if (!pet) return res.status(404).json({error: "no pet was found"});
+        return res.status(200).json(pet);
+    } catch (err) {
+        return res.status(400).json({ err: err.message });
+    }
+  },
+
   update: async (req, res) => {
     const {id} = req.params;
     const {

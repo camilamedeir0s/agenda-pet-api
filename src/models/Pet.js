@@ -33,9 +33,9 @@ const PetSchema = new mongoose.Schema({
         type: String,
         required: false
     }],
-    medicines: [Schema.Types.Mixed],
-    consultations: [Schema.Types.Mixed],
-    vaccines: [Schema.Types.Mixed],
+    medicines: [mongoose.Schema.Types.Mixed],
+    consultations: [mongoose.Schema.Types.Mixed],
+    vaccines: [mongoose.Schema.Types.Mixed],
     owner: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',

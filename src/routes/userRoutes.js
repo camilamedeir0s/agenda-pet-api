@@ -8,6 +8,6 @@ router.post('/register', userController.create);
 router.use(authMiddleware);
 router.get('/get/:id', userController.getOne);
 router.put('/update/:id', userController.update);
-router.delete('/delete/:id', verifyId(), userController.delete);
+router.delete('/delete/:id', userController.delete);
 
 module.exports = router;
