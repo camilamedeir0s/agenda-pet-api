@@ -4,12 +4,13 @@ module.exports = {
   create: async (req, res) => {
     const {
       email,
+      name,
       password
     } = req.body;
 
     try {
       const user = await User.create({
-        name: email,
+        name: name,
         email: email,
         password: password
       });
