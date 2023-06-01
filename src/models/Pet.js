@@ -25,10 +25,7 @@ const PetSchema = new mongoose.Schema({
         type: Number,
         required: false
     },
-    allergies:[{
-        type: String,
-        required: false
-    }],
+    allergies:[mongoose.Schema.Types.Mixed],
     notes:[{
         type: String,
         required: false
